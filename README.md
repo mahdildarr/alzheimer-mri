@@ -57,12 +57,20 @@ python src/gradcam.py --run runs/subject --n 8
 - Slice level and subject level: accuracy, balanced accuracy, macro-F1, ROC-AUC, confusion matrix
 - Leakage check: number of subjects present in both train and test sets (must be 0 for the subject-level split)
 
-## Roadmap
+## Progress
 
-- [x] Data preparation, both split strategies, subject-level metrics and Grad-CAM
+- [x] Subject ID parsing and slice selection
+- [x] Slice-level and subject-level splits
+- [x] ResNet-18 transfer learning with class weighting
+- [x] Subject-level decisions from slice probabilities
+- [x] Grad-CAM visualisation
+- [x] Colab notebook
+
+Next:
+
 - [ ] Binary classification experiments
 - [ ] Effect of the number of slices per subject
-- [ ] Subject-level k-fold cross-validation
+- [ ] Subject-level cross-validation
 
 ## Project structure
 
