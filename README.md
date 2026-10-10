@@ -4,8 +4,6 @@
 
 <p align="center"><img src="docs/assets/pipeline.svg" width="100%" alt="Pipeline"></p>
 
-> **Status:** Work in progress. Result tables will be added as experiments are completed.
->
 > This is an independent learning and reproduction project on publicly available data. It is not intended for clinical use.
 
 ## Problem
@@ -22,7 +20,6 @@ Popular Alzheimer's MRI datasets on Kaggle consist of many 2D slices extracted f
 | 4. Model | ImageNet-pretrained ResNet-18, transfer learning, class-weighted loss; model selection on the validation set | `src/train.py` |
 | 5. Subject-level decision | One decision per subject from the mean of its slice probabilities | `src/train.py` |
 | 6. Interpretability | Grad-CAM heatmaps of the regions the model attends to | `src/gradcam.py` |
-
 
 ## Data
 
@@ -59,13 +56,6 @@ python src/gradcam.py --run runs/subject --n 8
 
 - Slice level and subject level: accuracy, balanced accuracy, macro-F1, ROC-AUC, confusion matrix
 - Leakage check: number of subjects present in both train and test sets (must be 0 for the subject-level split)
-
-## Results
-
-| Split | Train ∩ test subjects | Slice accuracy | Subject accuracy | Subject macro-F1 | Subject AUC |
-|---|---|---|---|---|---|
-| Slice-level (leaky) | _TBD_ | _TBD_ | _TBD_ | _TBD_ | _TBD_ |
-| Subject-level | 0 | _TBD_ | _TBD_ | _TBD_ | _TBD_ |
 
 ## Roadmap
 
