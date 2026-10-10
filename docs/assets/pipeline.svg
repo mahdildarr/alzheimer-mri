@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="311" viewBox="0 0 960 311" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c8962e"/></marker></defs>
+<rect width="960" height="311" rx="14" fill="#ffffff"/>
+<text x="32" y="38" font-size="18" font-weight="700" fill="#1d2733">Subject-level evaluation for Alzheimer&#x27;s MRI classification</text>
+<text x="32" y="60" font-size="12.5" fill="#5b6775">The same CNN, two data splits: how much of the reported accuracy is data leakage?</text>
+<g transform="translate(32.0,86)">
+<rect width="198.5" height="201" rx="10" fill="#eef3f8" stroke="#c9d3dd"/>
+<text x="14" y="26" font-size="11" font-weight="700" fill="#2c5578" letter-spacing=".6">1 · DATA</text>
+<text x="14" y="54" font-size="12.5" font-weight="700" fill="#1d2733">OASIS-1 derived slices</text>
+<text x="14" y="70" font-size="11" fill="#5b6775">public Kaggle release</text>
+<text x="14" y="96" font-size="12.5" font-weight="700" fill="#1d2733">Labels from CDR</text>
+<text x="14" y="112" font-size="11" fill="#5b6775">no dementia (CDR 0) vs</text>
+<text x="14" y="127" font-size="11" fill="#5b6775">dementia (CDR ≥ 0.5)</text>
+<text x="14" y="153" font-size="12.5" font-weight="700" fill="#1d2733">Subject ID</text>
+<text x="14" y="169" font-size="11" fill="#5b6775">parsed from file names</text>
+</g>
+<line x1="234.5" y1="186" x2="260.5" y2="186" stroke="#c8962e" stroke-width="2.2" marker-end="url(#a)"/>
+<g transform="translate(264.5,86)">
+<rect width="198.5" height="201" rx="10" fill="#eef3f8" stroke="#c9d3dd"/>
+<text x="14" y="26" font-size="11" font-weight="700" fill="#2c5578" letter-spacing=".6">2 · SPLITS</text>
+<text x="14" y="54" font-size="12.5" font-weight="700" fill="#1d2733">(a) Slice-level</text>
+<text x="14" y="70" font-size="11" fill="#5b6775">random slices: same subject</text>
+<text x="14" y="85" font-size="11" fill="#5b6775">in train and test</text>
+<text x="14" y="111" font-size="12.5" font-weight="700" fill="#1d2733">(b) Subject-level</text>
+<text x="14" y="127" font-size="11" fill="#5b6775">test subjects never</text>
+<text x="14" y="142" font-size="11" fill="#5b6775">seen in training</text>
+</g>
+<line x1="467.0" y1="186" x2="493.0" y2="186" stroke="#c8962e" stroke-width="2.2" marker-end="url(#a)"/>
+<g transform="translate(497.0,86)">
+<rect width="198.5" height="201" rx="10" fill="#2c5578"/>
+<text x="14" y="26" font-size="11" font-weight="700" fill="#f0d79e" letter-spacing=".6">3 · MODEL</text>
+<text x="14" y="54" font-size="12.5" font-weight="700" fill="#ffffff">ResNet-18</text>
+<text x="14" y="70" font-size="11" fill="#d7e3ee">ImageNet-pretrained CNN</text>
+<text x="14" y="96" font-size="12.5" font-weight="700" fill="#ffffff">Transfer learning</text>
+<text x="14" y="112" font-size="11" fill="#d7e3ee">class-weighted loss</text>
+<text x="14" y="138" font-size="12.5" font-weight="700" fill="#ffffff">Subject decision</text>
+<text x="14" y="154" font-size="11" fill="#d7e3ee">mean of slice probabilities</text>
+</g>
+<line x1="699.5" y1="186" x2="725.5" y2="186" stroke="#c8962e" stroke-width="2.2" marker-end="url(#a)"/>
+<g transform="translate(729.5,86)">
+<rect width="198.5" height="201" rx="10" fill="#eef3f8" stroke="#c9d3dd"/>
+<text x="14" y="26" font-size="11" font-weight="700" fill="#2c5578" letter-spacing=".6">4 · EVALUATION</text>
+<text x="14" y="54" font-size="12.5" font-weight="700" fill="#1d2733">Slice- and subject-level</text>
+<text x="14" y="70" font-size="11" fill="#5b6775">accuracy, F1, AUC</text>
+<text x="14" y="96" font-size="12.5" font-weight="700" fill="#1d2733">Leakage gap</text>
+<text x="14" y="112" font-size="11" fill="#5b6775">(a) minus (b)</text>
+<text x="14" y="138" font-size="12.5" font-weight="700" fill="#1d2733">Grad-CAM</text>
+<text x="14" y="154" font-size="11" fill="#5b6775">regions the model uses</text>
+</g>
+</svg>

@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Data and experiment outputs
+datasets/
+data/*
+!data/.gitkeep
+runs/
+*.pt
+*.mp4
+*.zip
