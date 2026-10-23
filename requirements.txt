@@ -2,6 +2,9 @@ torch
 torchvision
 scikit-learn
 numpy
+pandas
 pillow
 matplotlib
 kagglehub
+pytest
+ruff
